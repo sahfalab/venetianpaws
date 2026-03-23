@@ -852,13 +852,12 @@ url('theview.jpeg') center/cover no-repeat;
     background: var(--cream);
   }
 
-.sofia-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 80px 72px;
-  order: 1;
-}
+  .sofia-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 72px;
+    order: 1;
   }
 
   .sofia-content h2 {
@@ -885,13 +884,15 @@ url('theview.jpeg') center/cover no-repeat;
 
   .sofia-content p + p { margin-top: 14px; }
 
-.sofia-breed {
-  display: block;
-  width: 100%;
-  border-bottom: 1px solid var(--gold-light);
-  margin-top: auto;
-  padding-bottom: 2px;
-}
+  .sofia-breed {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted-gold);
+    border-bottom: 1px solid var(--gold-light);
+    padding-bottom: 2px;
   }
 
   .sofia-image {
@@ -1248,7 +1249,7 @@ url('theview.jpeg') center/cover no-repeat;
       <p>We know every path and hidden gem of Belle Isle</p>
     </div>
     <div class="promise-item">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
       <h4>Live<br>Updates</h4>
       <p>Photos and text updates on every walk</p>
     </div>
