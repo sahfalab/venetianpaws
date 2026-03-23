@@ -990,6 +990,79 @@ nav {
 .about-content h2 {
   font-style: normal;
 }
+  .inquiry-form {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.inquiry-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.inquiry-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+.inquiry-field label {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  font-family: 'Jost', sans-serif;
+}
+.inquiry-field input,
+.inquiry-field textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: none;
+  width: 100%;
+}
+.inquiry-field input::placeholder,
+.inquiry-field textarea::placeholder {
+  color: rgba(255,255,255,0.2);
+}
+.inquiry-field input:focus,
+.inquiry-field textarea:focus {
+  border-color: #B8976A;
+}
+.inquiry-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 48px;
+  background: transparent;
+  border: 1px solid #B8976A;
+  color: #D4BC94;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  align-self: center;
+  margin-top: 8px;
+}
+.inquiry-submit:hover {
+  background: #B8976A;
+  color: #1A1A1A;
+}
+@media (max-width: 900px) {
+  .inquiry-row { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1272,8 +1345,32 @@ nav {
 <section class="contact" id="contact">
   <div class="section-eyebrow" style="color: var(--gold-light);">Get in Touch</div>
   <h2 class="reveal">Give your dog the care<br><em>they truly deserve</em></h2>
-  <p class="sub reveal">Complimentary meet & greet for all new clients</p>
-  <button class="contact-btn reveal" onclick="void(0)">
+<p class="sub reveal">Complimentary meet & greet for all new clients</p>
+
+  <form class="inquiry-form reveal" action="https://formspree.io/f/xojkonlr" method="POST">
+    <div class="inquiry-row">
+      <div class="inquiry-field">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name" required />
+      </div>
+      <div class="inquiry-field">
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="Your number" required />
+      </div>
+    </div>
+    <div class="inquiry-field">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Your email" required />
+    </div>
+    <div class="inquiry-field">
+      <label>Message</label>
+      <textarea name="message" placeholder="Tell us about your dog..." rows="4" required></textarea>
+    </div>
+    <button type="submit" class="inquiry-submit">
+      Send enquiry
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </form>  <button class="contact-btn reveal" onclick="void(0)">
     Schedule a consultation
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </button>
