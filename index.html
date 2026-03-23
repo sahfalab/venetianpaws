@@ -407,11 +407,16 @@ nav {
 
   .service-card:hover::before { transform: scaleX(1); }
 
-  .service-icon {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 28px;
-    color: var(--muted-gold);
+.service-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 28px;
+  color: var(--muted-gold);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.service-card:hover .service-icon {
+  transform: translateY(-6px);
   }
 
   .service-card h3 {
