@@ -392,14 +392,14 @@
     box-shadow: 0 24px 64px rgba(0,0,0,0.06);
   }
 
-  .service-card::before {
+.service-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, var(--muted-gold), var(--gold-light));
+    background: var(--card-accent, var(--muted-gold));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s ease;
@@ -561,10 +561,10 @@
 
   .promise-item:last-child { border-right: none; }
 
-  .promise-item svg {
+.promise-item svg {
     width: 28px;
     height: 28px;
-    color: var(--muted-gold);
+    color: #6BB8D4;
     margin-bottom: 20px;
   }
 
@@ -1069,31 +1069,25 @@
   <div class="section-eyebrow">What We Offer</div>
   <h2 class="reveal">Three Pillars of Care</h2>
   <p class="subtitle reveal">Each service is fully customized to your companion's temperament and routine.</p>
-  <div class="services-grid">
-    <div class="service-card reveal">
-    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Dog body -->
-  <ellipse cx="11" cy="15" rx="5" ry="3.5"/>
-  <!-- Head -->
-  <circle cx="16.5" cy="11.5" r="2"/>
-  <!-- Ear -->
-  <path d="M15 10 Q13.5 8 14.5 6.5"/>
-  <!-- Tail -->
-  <path d="M6 14 Q3.5 12 4 9.5"/>
-  <!-- Legs -->
-  <line x1="9" y1="18" x2="8.5" y2="21"/>
-  <line x1="11" y1="18.5" x2="11" y2="21"/>
-  <line x1="13" y1="18.5" x2="13.5" y2="21"/>
-  <!-- Snout -->
-  <path d="M18.5 12 L19.5 12.5"/>
-  <!-- Leash -->
-  <path d="M16.5 9.5 Q16 6 19 4"/>
-</svg>
+ <div class="services-grid">
+    <div class="service-card reveal" style="--card-accent: #6BB8D4;">
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="11" cy="15" rx="5" ry="3.5"/>
+        <circle cx="16.5" cy="11.5" r="2"/>
+        <path d="M15 10 Q13.5 8 14.5 6.5"/>
+        <path d="M6 14 Q3.5 12 4 9.5"/>
+        <line x1="9" y1="18" x2="8.5" y2="21"/>
+        <line x1="11" y1="18.5" x2="11" y2="21"/>
+        <line x1="13" y1="18.5" x2="13.5" y2="21"/>
+        <path d="M18.5 12 L19.5 12.5"/>
+        <path d="M16.5 9.5 Q16 6 19 4"/>
+      </svg>
       <h3>Dog Walking</h3>
       <p>Scenic waterfront routes along Belle Isle's most beautiful paths. Solo or small-group outings tailored to your dog's pace, personality, and preferences.</p>
       <span class="service-tag">Daily availability</span>
     </div>
-    <div class="service-card reveal">
+
+    <div class="service-card reveal" style="--card-accent: #4A5240;">
       <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
         <path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/>
         <path d="M12 7v5l3 3"/>
@@ -1102,7 +1096,8 @@
       <p>In-home companionship so your pet stays in their element. Feeding, playtime, medication — every detail of their routine honored with precision.</p>
       <span class="service-tag">Flexible hours</span>
     </div>
-    <div class="service-card reveal">
+
+    <div class="service-card reveal" style="--card-accent: var(--muted-gold);">
       <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
         <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/>
       </svg>
