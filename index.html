@@ -852,12 +852,13 @@ url('theview.jpeg') center/cover no-repeat;
     background: var(--cream);
   }
 
-  .sofia-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 72px;
-    order: 1;
+.sofia-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 72px;
+  order: 1;
+}
   }
 
   .sofia-content h2 {
@@ -884,15 +885,13 @@ url('theview.jpeg') center/cover no-repeat;
 
   .sofia-content p + p { margin-top: 14px; }
 
-  .sofia-breed {
-    display: inline-block;
-    margin-top: 24px;
-    font-size: 10px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--muted-gold);
-    border-bottom: 1px solid var(--gold-light);
-    padding-bottom: 2px;
+.sofia-breed {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid var(--gold-light);
+  margin-top: auto;
+  padding-bottom: 2px;
+}
   }
 
   .sofia-image {
